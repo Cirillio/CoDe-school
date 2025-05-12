@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru" class="font-display">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/kontur-mockup/assets/favicon-DUMBMhJM.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoDe</title>
+    <link rel="stylesheet" crossorigin href="/kontur-mockup/assets/index-D9IzrW_V.css">
+  </head>
+  <body class="bg-base-200 flex w-full min-h-dvh">
+    <style>
+      .text-code {
+        font-weight: 700;
+        position: relative;
+        @media (min-width: 768px) {
+          &::before {
+            content: "{";
+            color: var(--color-primary);
+            font-weight: 400;
+          }
+          &::after {
+            content: "}";
+            color: var(--color-primary);
+            font-weight: 400;
+          }
+        }
+      }
+    </style>
+    <div
+      class="min-h-full flex flex-1 flex-col max-w-[1160px] mx-[10px] lg:mx-auto"
+    >
+      <header
+        class="w-full h-fit flex items-baseline bg-base-100 rounded-[75px] px-4 lg:px-8 py-2 lg:py-3 my-6"
+      >
+        <a href="/" class="w-fit flex">
+          <div class="logo flex font-medium text-2xl">
+            <span class="text-secondary">C</span>
+            <span class="text-accent">o</span>
+            <span class="text-primary">D</span>
+            <span class="text-accent">e</span>
+          </div>
+        </a>
+        <nav class="lg:block min-[100px]:hidden ml-12">
+          <ul class="flex gap-10 text-sm font-normal">
+            <li><a href="#">Чему вы научитесь</a></li>
+            <li><a href="#">Процесс обучения</a></li>
+            <li><a href="#">Стоимость</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <a
+          href="tel:+7 (499) 348 93 96"
+          class="text-secondary text-[16px] mx-auto lg:mr-0 lg:ml-auto"
+          >+7 (499) 348 93 96</a
+        >
+
+        <button class="cursor-pointer block lg:hidden">
+          <img src="data:image/svg+xml,%3csvg%20width='17'%20height='14'%20viewBox='0%200%2017%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='17'%20height='2'%20rx='1'%20fill='%23F15525'/%3e%3crect%20y='6'%20width='17'%20height='2'%20rx='1'%20fill='%23F15525'/%3e%3crect%20y='12'%20width='17'%20height='2'%20rx='1'%20fill='%23F15525'/%3e%3c/svg%3e" alt="burger_icon" />
+        </button>
+      </header>
+      <main class="w-full flex flex-col gap-[60px] h-full border-amber-500">
+        <section
+          class="banner w-full overflow-hidden relative h-fit px-2 md:px-10 py-8 lg:pt-[60px] lg:pb-10 rounded-[48px] bg-base-100"
+        >
+          <div class="absolute right-0 h-full w-full inset-0 z-0">
+            <div class="w-full h-full flex items-center overflow-hidden">
+              <img
+                class="object-cover object-right min-[100px]:hidden md:flex w-full h-full"
+                src="/kontur-mockup/assets/banner_bg-D8nw3YGo.png"
+                alt=""
+              />
+              <img
+                class="object-cover object-center md:hidden flex w-full h-full"
+                src="/kontur-mockup/assets/banner_bg-rotate-CVRXeYBa.png"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div
+            class="banner-container relative flex items-center md:flex-nowrap flex-wrap gap-10 justify-center z-20"
+          >
+            <div class="flex flex-col md:items-start items-center">
+              <div
+                class="flex flex-col md:items-start items-center text-accent gap-4 lg:gap-6"
+              >
+                <h2
+                  class="md:text-4xl md:leading-9 leading-6 text-2xl lg:text-[46px] font-medium max-w-[638px] text-center md:text-start lg:leading-[46px]"
+                >
+                  <span class="inline">
+                    Школа
+                    <span class="text-code font-bold">программирования</span>
+                  </span>
+                  <br />
+                  для тех, кому нужны реальные навыки, <br />а не просто
+                  сертификат
+                </h2>
+                <div class="h-[1px] max-w-[320px] w-full bg-neutral"></div>
+                <p class="font-normal max-w-[365px] text-center md:text-start">
+                  Закажите звонок, и наш специалист свяжется с вами в ближайшее
+                  время
+                </p>
+              </div>
+              <button
+                class="flex max-w-[265px] py-7 px-[42px] my-4 text-white bg-primary rounded-[82px] cursor-pointer"
+              >
+                <div class="flex h-[15px] gap-3 items-center">
+                  <span class="text-lg text-nowrap">Заказать звонок</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M18 6L6 18M8 6h10v10"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <picture class="max-h-[320px] items-center relative">
+              <img
+                class="h-full z-10 relative"
+                src="/kontur-mockup/assets/Lessons-Dcu3d-84.svg"
+                alt="code_banner"
+              />
+            </picture>
+          </div>
+        </section>
+        <section class="flex items-center w-full flex-col gap-8">
+          <h1
+            class="lg:text-[46px] sm:text-4xl text-2xl font-semibold text-center leading-[26px] sm:leading-9 lg:leading-[46px]"
+          >
+            Обучение в CoDe – это <br />
+            удобно и результативно
+          </h1>
+          <div
+            class="info-cards w-full flex flex-wrap items-center justify-center gap-[10px] sm:gap-6"
+          >
+            <div class="info-card">
+              <div class="info-card__content">
+                <picture class="info-card__icon">
+                  <img
+                    src="/kontur-mockup/assets/practices-Bs0Mgnkd.svg"
+                    alt="practice_info_block"
+                  />
+                </picture>
+                <span class="info-card__text">
+                  <h3 class="info-card__title">Огромное количество практики</h3>
+                  <p class="info-card__desc">
+                    Более 500 самостоятельных заданий и 20 полноценных больших
+                    проектов
+                  </p>
+                </span>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__content">
+                <picture class="info-card__icon">
+                  <img
+                    src="/kontur-mockup/assets/methodics-BSp7FepT.svg"
+                    alt="methodics"
+                  />
+                </picture>
+                <span class="info-card__text">
+                  <h3 class="info-card__title">
+                    Современные методики обучения
+                  </h3>
+                  <p class="info-card__desc">
+                    Спиральное обучение: погружаемся в материал постепенно,
+                    виток за витком
+                  </p>
+                </span>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__content">
+                <picture class="info-card__icon">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='70'%20height='61'%20viewBox='0%200%2070%2061'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M68.9169%204.03252V39.6131H1.08203V4.03252C1.08203%202.41491%202.37375%201.10474%203.96857%201.10474H66.0304C67.6252%201.1046%2068.9169%202.41491%2068.9169%204.03252Z'%20fill='white'/%3e%3cpath%20d='M1.08203%2039.614V46.1541C1.08203%2047.7711%202.37443%2049.0818%203.96857%2049.0818H66.0304C67.6247%2049.0818%2068.9169%2047.771%2068.9169%2046.1541V39.614H1.08203Z'%20fill='%2338BFF2'/%3e%3cpath%20d='M27.4297%2049.0819H42.5697V55.9717H27.4297V49.0819Z'%20fill='%23D7E9FF'/%3e%3cpath%20d='M48.6404%2056.824L50.4448%2058.6449C50.9012%2059.1054%2050.5796%2059.8957%2049.9358%2059.8957H20.0668C19.423%2059.8957%2019.1015%2059.1054%2019.5578%2058.6449L21.3623%2056.824C21.9031%2056.2781%2022.6351%2055.9717%2023.3981%2055.9717H46.6044C47.3675%2055.9717%2048.0995%2056.2781%2048.6404%2056.824Z'%20fill='%2338BFF2'/%3e%3cpath%20d='M35.0005%2045.8045C35.7937%2045.8045%2036.4366%2045.1523%2036.4366%2044.3478C36.4366%2043.5434%2035.7937%2042.8912%2035.0005%2042.8912C34.2074%2042.8912%2033.5645%2043.5434%2033.5645%2044.3478C33.5645%2045.1523%2034.2074%2045.8045%2035.0005%2045.8045Z'%20fill='%23D7E9FF'/%3e%3cpath%20d='M69.6397%204.03239C69.6397%202.01443%2068.021%200.372559%2066.0314%200.372559H3.96961C1.98008%200.372559%200.361328%202.01443%200.361328%204.03239V46.1544C0.361328%2048.1723%201.98008%2049.8142%203.96961%2049.8142H26.7087V55.2396H23.3971C22.4365%2055.2396%2021.533%2055.6185%2020.853%2056.3054L19.0482%2058.1261C18.1375%2059.045%2018.7801%2060.6279%2020.0658%2060.6279H49.9353C51.2203%2060.6279%2051.8642%2059.0457%2050.9529%2058.1261L49.148%2056.3054C48.468%2055.6178%2047.5646%2055.2396%2046.604%2055.2396H43.2924V49.8142H66.0314C68.021%2049.8142%2069.6397%2048.1723%2069.6397%2046.1544C69.6397%2031.192%2069.6397%2020.0716%2069.6397%204.03239ZM1.80467%204.03239C1.80467%202.8215%202.77578%201.83652%203.96961%201.83652H66.0314C67.2253%201.83652%2068.1964%202.8215%2068.1964%204.03239V38.8812H1.80467V4.03239ZM48.1298%2057.3424C48.1304%2057.3431%2048.1304%2057.3431%2048.1304%2057.3431L49.9353%2059.1638H20.0658L21.8713%2057.3424C22.2794%2056.9307%2022.8212%2056.7034%2023.3971%2056.7034H46.604C47.1797%2056.7034%2047.7217%2056.9307%2048.1298%2057.3424ZM41.8492%2055.2395H28.1519V49.8141H41.8492V55.2395ZM68.1964%2046.1544C68.1964%2047.3653%2067.2253%2048.3503%2066.0314%2048.3503C45.3324%2048.3503%2024.6193%2048.3503%203.96961%2048.3503C2.77578%2048.3503%201.80467%2047.3653%201.80467%2046.1544V40.3458H68.1964V46.1544Z'%20fill='%231A2E35'/%3e%3cpath%20d='M34.9998%2046.5367C36.1894%2046.5367%2037.1577%2045.5547%2037.1577%2044.3481C37.1577%2043.1415%2036.1895%2042.1593%2034.9998%2042.1593C33.8102%2042.1593%2032.8418%2043.1414%2032.8418%2044.3481C32.8418%2045.5547%2033.8102%2046.5367%2034.9998%2046.5367ZM34.9998%2043.6233C35.3937%2043.6233%2035.7144%2043.9484%2035.7144%2044.3481C35.7144%2044.7476%2035.3938%2045.0729%2034.9998%2045.0729C34.6057%2045.0729%2034.2851%2044.7477%2034.2851%2044.3481C34.2851%2043.9484%2034.6059%2043.6233%2034.9998%2043.6233Z'%20fill='%231A2E35'/%3e%3cpath%20d='M56.0665%209.00012H7.7216C7.32265%209.00012%207%209.32753%207%209.73203C7%2010.1365%207.32279%2010.4639%207.7216%2010.4639H56.0665C56.4655%2010.4639%2056.7881%2010.1365%2056.7881%209.73203C56.7881%209.32753%2056.4653%209.00012%2056.0665%209.00012Z'%20fill='%231A2E35'/%3e%3cpath%20d='M56.0665%2014.0001H7.7216C7.32265%2014.0001%207%2014.3275%207%2014.732C7%2015.1365%207.32279%2015.4639%207.7216%2015.4639H56.0665C56.4655%2015.4639%2056.7881%2015.1365%2056.7881%2014.732C56.7881%2014.3275%2056.4653%2014.0001%2056.0665%2014.0001Z'%20fill='%231A2E35'/%3e%3cpath%20d='M46.0665%2019.0001H7.7216C7.32265%2019.0001%207%2019.3275%207%2019.732C7%2020.1365%207.32279%2020.4639%207.7216%2020.4639H46.0665C46.4655%2020.4639%2046.7881%2020.1365%2046.7881%2019.732C46.7881%2019.3275%2046.4653%2019.0001%2046.0665%2019.0001Z'%20fill='%231A2E35'/%3e%3cpath%20d='M36.0665%2024.0001H7.7216C7.32265%2024.0001%207%2024.3275%207%2024.732C7%2025.1365%207.32279%2025.4639%207.7216%2025.4639H36.0665C36.4655%2025.4639%2036.7881%2025.1365%2036.7881%2024.732C36.7881%2024.3275%2036.4653%2024.0001%2036.0665%2024.0001Z'%20fill='%231A2E35'/%3e%3cpath%20d='M26.0665%2029.0001H7.7216C7.32265%2029.0001%207%2029.3275%207%2029.732C7%2030.1365%207.32279%2030.4639%207.7216%2030.4639H26.0665C26.4655%2030.4639%2026.7881%2030.1365%2026.7881%2029.732C26.7881%2029.3275%2026.4653%2029.0001%2026.0665%2029.0001Z'%20fill='%231A2E35'/%3e%3c/svg%3e"
+                    alt="understand"
+                  />
+                </picture>
+                <span class="info-card__text">
+                  <h3 class="info-card__title">Простое и понятное изложение</h3>
+                  <p class="info-card__desc">
+                    Вместо заумных терминов – примеры из реального мира
+                  </p>
+                </span>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__content">
+                <picture class="info-card__icon">
+                  <img src="/kontur-mockup/assets/calendar-D-Mg4qeW.svg" alt="calendar" />
+                </picture>
+                <span class="info-card__text">
+                  <h3 class="info-card__title">Гибкий график занятий</h3>
+                  <p class="info-card__desc">
+                    Учитесь в любое время в удобном для вас темпе
+                  </p>
+                </span>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__content">
+                <picture class="info-card__icon">
+                  <img src="data:image/svg+xml,%3csvg%20width='64'%20height='57'%20viewBox='0%200%2064%2057'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6%200.75H43.3271C46.2265%200.750122%2048.5771%203.10058%2048.5771%206V34.5576C48.5771%2037.457%2046.2265%2039.8075%2043.3271%2039.8076H19.4189C17.8107%2039.8076%2016.2244%2040.1689%2014.7764%2040.8623L14.4883%2041.0049L2.57324%2047.1543C1.74127%2047.5837%200.75%2046.9802%200.75%2046.0439V6C0.75%203.10051%203.1005%200.75%206%200.75Z'%20fill='white'%20stroke='%23263238'%20stroke-width='1.5'/%3e%3cpath%20d='M51.726%2013.1538H56.4805C59.7942%2013.1538%2062.4805%2015.8401%2062.4805%2019.1538V48.6205V53.4776C62.4805%2055.03%2060.7888%2055.9905%2059.4556%2055.1951L50.8049%2050.0331C49.2555%2049.1086%2047.4849%2048.6205%2045.6807%2048.6205H27.2452C24.3057%2048.6205%2021.9228%2046.2376%2021.9228%2043.2981V43.2981'%20stroke='%23263238'%20stroke-width='1.5'/%3e%3crect%20x='10.2109'%20y='12.4038'%20width='30'%20height='3.69231'%20rx='1.84615'%20fill='%2338BFF2'%20stroke='%23263238'%20stroke-width='1.5'/%3e%3crect%20x='10.2109'%20y='20.0769'%20width='23.4231'%20height='3.69231'%20rx='1.84615'%20fill='%2338BFF2'%20stroke='%23263238'%20stroke-width='1.5'/%3e%3c/svg%3e" alt="flex" />
+                </picture>
+                <span class="info-card__text">
+                  <h3 class="info-card__title">
+                    Прямая связь с программистами
+                  </h3>
+                  <p class="info-card__desc">
+                    Задавайте вопросы и отправляйте свой код на проверку
+                  </p>
+                </span>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__content">
+                <picture class="info-card__icon">
+                  <img src="data:image/svg+xml,%3csvg%20width='59'%20height='59'%20viewBox='0%200%2059%2059'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_22104_8706)'%3e%3cpath%20d='M49.9164%2049.922C61.1952%2038.6433%2061.1952%2020.3567%2049.9164%209.07798C38.6377%20-2.20079%2020.3512%20-2.20078%209.0724%209.07798C-2.20636%2020.3568%20-2.20636%2038.6432%209.0724%2049.922C20.3512%2061.2008%2038.6377%2061.2008%2049.9164%2049.922Z'%20fill='%2338BFF2'/%3e%3cpath%20d='M29.5013%2052.2396C42.06%2052.2396%2052.2408%2042.0587%2052.2408%2029.5C52.2408%2016.9413%2042.06%206.76047%2029.5013%206.76047C16.9426%206.76047%206.76172%2016.9413%206.76172%2029.5C6.76172%2042.0587%2016.9426%2052.2396%2029.5013%2052.2396Z'%20fill='white'/%3e%3cpath%20d='M29.5%200C13.2336%200%200%2013.2336%200%2029.5C0%2045.7664%2013.2336%2059%2029.5%2059C45.7664%2059%2059%2045.7664%2059%2029.5C59%2013.2336%2045.7664%200%2029.5%200ZM29.5%2057.7708C13.9116%2057.7708%201.22921%2045.0884%201.22921%2029.5C1.22921%2013.9116%2013.9116%201.22921%2029.5%201.22921C45.0884%201.22921%2057.7708%2013.9116%2057.7708%2029.5C57.7708%2045.0884%2045.0884%2057.7708%2029.5%2057.7708Z'%20fill='%231A2E35'/%3e%3cpath%20d='M29.5007%206.14578C16.6232%206.14578%206.14648%2016.6225%206.14648%2029.5C6.14648%2042.3774%2016.6232%2052.8542%2029.5007%2052.8542C42.3781%2052.8542%2052.8549%2042.3774%2052.8549%2029.5C52.8549%2016.6225%2042.3781%206.14578%2029.5007%206.14578ZM29.5007%2051.625C17.3008%2051.625%207.37569%2041.6999%207.37569%2029.5C7.37569%2017.3001%2017.3008%207.37499%2029.5007%207.37499C41.7006%207.37499%2051.6257%2017.3001%2051.6257%2029.5C51.6257%2041.6999%2041.7006%2051.625%2029.5007%2051.625Z'%20fill='%231A2E35'/%3e%3cpath%20d='M31.9615%2016.2147H23.7879C23.7776%2016.2142%2023.7688%2016.2087%2023.7582%2016.2087C23.4189%2016.2087%2023.1437%2016.4839%2023.1437%2016.8233V16.8293V28.5813H20.8567C20.5174%2028.5813%2020.2422%2028.8565%2020.2422%2029.1959C20.2422%2029.5352%2020.5174%2029.8104%2020.8567%2029.8104H23.1437V32.412H20.8567C20.5174%2032.412%2020.2422%2032.6871%2020.2422%2033.0265C20.2422%2033.3659%2020.5174%2033.641%2020.8567%2033.641H23.1437V42.1765C23.1437%2042.5158%2023.4189%2042.791%2023.7582%2042.791C24.0976%2042.791%2024.3728%2042.5158%2024.3728%2042.1765V33.641H35.4632C35.8025%2033.641%2036.0777%2033.3659%2036.0777%2033.0265C36.0777%2032.6871%2035.8025%2032.412%2035.4632%2032.412H24.3729V29.8104H25.4088H31.5312C35.3003%2029.8104%2038.4663%2027.0646%2038.7385%2023.5593C38.7385%2023.559%2038.7385%2023.559%2038.7385%2023.559C39.0546%2019.4844%2035.8377%2016.2147%2031.9615%2016.2147ZM37.5129%2023.4642V23.4639C37.2903%2026.3337%2034.6627%2028.5813%2031.5312%2028.5813H25.4088H24.3729V17.4438H31.9615C35.1355%2017.4439%2037.7727%2020.1178%2037.5129%2023.4642Z'%20fill='%231A2E35'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_22104_8706'%3e%3crect%20width='59'%20height='59'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="payment" />
+                </picture>
+                <span class="info-card__text">
+                  <h3 class="info-card__title">Оплата небольшими частями</h3>
+                  <p class="info-card__desc">
+                    Платите только за тот материал, который сейчас изучаете
+                  </p>
+                </span>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__content">
+                <picture class="info-card__icon">
+                  <img
+                    src="/kontur-mockup/assets/returning-cPgN3DUF.svg"
+                    alt="returning"
+                  />
+                </picture>
+                <span class="info-card__text">
+                  <h3 class="info-card__title">Быстрый и легкий возврат</h3>
+                  <p class="info-card__desc">
+                    Если передумаете учиться — вернём деньги за 3 рабочих дня
+                  </p>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section></section>
+      </main>
+    </div>
+  </body>
+</html>
