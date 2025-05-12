@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base-100: hsla(0, 0%, 100%, 0.9);
+  --color-base-200: hsla(252, 56%, 98%, 1);
+  --color-base-300: hsla(196, 35%, 94%, 1);
+
+  --color-primary: hsla(14, 88%, 55%, 1);
+  --color-secondary: hsla(196, 88%, 58%, 1);
+  --color-accent: hsla(233, 27%, 18%, 1);
+}
