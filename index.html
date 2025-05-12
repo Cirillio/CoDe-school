@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CoDe</title>
     <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="/src/info_card.css" />
   </head>
   <body class="bg-base-200 flex w-full min-h-dvh">
     <style>
@@ -26,7 +27,9 @@
         }
       }
     </style>
-    <div class="min-h-full flex flex-1 flex-col max-w-[1160px] mx-3 lg:mx-auto">
+    <div
+      class="min-h-full flex flex-1 flex-col max-w-[1160px] mx-[10px] lg:mx-auto"
+    >
       <header
         class="w-full h-fit flex items-baseline bg-base-100 rounded-[75px] px-4 lg:px-8 py-2 lg:py-3 my-6"
       >
@@ -132,7 +135,133 @@
             </picture>
           </div>
         </section>
-        <section></section>
+        <section class="flex items-center w-full flex-col gap-8">
+          <h1
+            class="lg:text-[46px] sm:text-4xl text-2xl font-semibold text-center leading-[26px] sm:leading-9 lg:leading-[46px]"
+          >
+            Обучение в CoDe – это <br />
+            удобно и результативно
+          </h1>
+          <div
+            class="info-cards w-full flex flex-wrap items-center justify-center gap-[10px] sm:gap-6"
+          >
+            <div class="info-card">
+              <div class="info-card__content">
+                <picture class="info-card__icon">
+                  <img
+                    src="/public/info_blocks/practices.svg"
+                    alt="practice_info_block"
+                  />
+                </picture>
+                <span class="info-card__text">
+                  <h3 class="info-card__title">Огромное количество практики</h3>
+                  <p class="info-card__desc">
+                    Более 500 самостоятельных заданий и 20 полноценных больших
+                    проектов
+                  </p>
+                </span>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__content">
+                <picture class="info-card__icon">
+                  <img
+                    src="/public/info_blocks/methodics.svg"
+                    alt="methodics"
+                  />
+                </picture>
+                <span class="info-card__text">
+                  <h3 class="info-card__title">
+                    Современные методики обучения
+                  </h3>
+                  <p class="info-card__desc">
+                    Спиральное обучение: погружаемся в материал постепенно,
+                    виток за витком
+                  </p>
+                </span>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__content">
+                <picture class="info-card__icon">
+                  <img
+                    src="/public/info_blocks/understand.svg"
+                    alt="understand"
+                  />
+                </picture>
+                <span class="info-card__text">
+                  <h3 class="info-card__title">Простое и понятное изложение</h3>
+                  <p class="info-card__desc">
+                    Вместо заумных терминов – примеры из реального мира
+                  </p>
+                </span>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__content">
+                <picture class="info-card__icon">
+                  <img src="/public/info_blocks/calendar.svg" alt="calendar" />
+                </picture>
+                <span class="info-card__text">
+                  <h3 class="info-card__title">Гибкий график занятий</h3>
+                  <p class="info-card__desc">
+                    Учитесь в любое время в удобном для вас темпе
+                  </p>
+                </span>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__content">
+                <picture class="info-card__icon">
+                  <img src="/public/info_blocks/flex.svg" alt="flex" />
+                </picture>
+                <span class="info-card__text">
+                  <h3 class="info-card__title">
+                    Прямая связь с программистами
+                  </h3>
+                  <p class="info-card__desc">
+                    Задавайте вопросы и отправляйте свой код на проверку
+                  </p>
+                </span>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__content">
+                <picture class="info-card__icon">
+                  <img src="/public/info_blocks/payment.svg" alt="payment" />
+                </picture>
+                <span class="info-card__text">
+                  <h3 class="info-card__title">Оплата небольшими частями</h3>
+                  <p class="info-card__desc">
+                    Платите только за тот материал, который сейчас изучаете
+                  </p>
+                </span>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__content">
+                <picture class="info-card__icon">
+                  <img
+                    src="/public/info_blocks/returning.svg"
+                    alt="returning"
+                  />
+                </picture>
+                <span class="info-card__text">
+                  <h3 class="info-card__title">Быстрый и легкий возврат</h3>
+                  <p class="info-card__desc">
+                    Если передумаете учиться — вернём деньги за 3 рабочих дня
+                  </p>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
         <section></section>
       </main>
     </div>
