@@ -1,15 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" class="font-display">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CoDe</title>
     <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body class="bg-base-200 flex w-full min-h-dvh">
-    <main class="min-h-full flex flex-1 max-w-[1160px] border mx-auto">
-      Initial Mockup
-    </main>
+    <style>
+      .text-code {
+        font-weight: 700;
+        position: relative;
+        @media (min-width: 768px) {
+          &::before {
+            content: "{";
+            color: var(--color-primary);
+            font-weight: 400;
+          }
+          &::after {
+            content: "}";
+            color: var(--color-primary);
+            font-weight: 400;
+          }
+        }
+      }
+    </style>
+    <div class="min-h-full flex flex-1 flex-col max-w-[1160px] mx-3 lg:mx-auto">
+      <header
+        class="w-full h-fit flex items-baseline bg-base-100 rounded-[75px] px-4 lg:px-8 py-2 lg:py-3 my-6"
+      >
+        <a href="/" class="w-fit flex">
+          <div class="logo flex font-medium text-2xl">
+            <span class="text-secondary">C</span>
+            <span class="text-accent">o</span>
+            <span class="text-primary">D</span>
+            <span class="text-accent">e</span>
+          </div>
+        </a>
+        <nav class="lg:block min-[100px]:hidden ml-12">
+          <ul class="flex gap-10 text-sm font-normal">
+            <li><a href="#">Чему вы научитесь</a></li>
+            <li><a href="#">Процесс обучения</a></li>
+            <li><a href="#">Стоимость</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <a
+          href="tel:+7 (499) 348 93 96"
+          class="text-secondary text-[16px] mx-auto lg:mr-0 lg:ml-auto"
+          >+7 (499) 348 93 96</a
+        >
+
+        <button class="cursor-pointer block lg:hidden">
+          <img src="/assets/icons/burger.svg" alt="burger_icon" />
+        </button>
+      </header>
+      <main class="w-full flex flex-col gap-[60px] h-full border-amber-500">
+        <section
+          class="banner w-full overflow-hidden relative h-fit px-2 md:px-10 py-8 lg:pt-[60px] lg:pb-10 rounded-[48px] bg-base-100"
+        >
+          <div class="absolute right-0 h-full w-full inset-0 z-0">
+            <div class="w-full h-full flex items-center overflow-hidden">
+              <img
+                class="object-cover object-right min-[100px]:hidden md:flex w-full h-full"
+                src="/public/banner_img/banner_bg.png"
+                alt=""
+              />
+              <img
+                class="object-cover object-center md:hidden flex w-full h-full"
+                src="/public/banner_img/banner_bg-rotate.png"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div
+            class="banner-container relative flex items-center md:flex-nowrap flex-wrap gap-10 justify-center z-20"
+          >
+            <div class="flex flex-col md:items-start items-center">
+              <div
+                class="flex flex-col md:items-start items-center text-accent gap-4 lg:gap-6"
+              >
+                <h2
+                  class="md:text-4xl md:leading-9 leading-6 text-2xl lg:text-[46px] font-medium max-w-[638px] text-center md:text-start lg:leading-[46px]"
+                >
+                  <span class="inline">
+                    Школа
+                    <span class="text-code font-bold">программирования</span>
+                  </span>
+                  <br />
+                  для тех, кому нужны реальные навыки, <br />а не просто
+                  сертификат
+                </h2>
+                <div class="h-[1px] max-w-[320px] w-full bg-neutral"></div>
+                <p class="font-normal max-w-[365px] text-center md:text-start">
+                  Закажите звонок, и наш специалист свяжется с вами в ближайшее
+                  время
+                </p>
+              </div>
+              <button
+                class="flex max-w-[265px] py-7 px-[42px] my-4 text-white bg-primary rounded-[82px] cursor-pointer"
+              >
+                <div class="flex h-[15px] gap-3 items-center">
+                  <span class="text-lg text-nowrap">Заказать звонок</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M18 6L6 18M8 6h10v10"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <picture class="max-h-[320px] items-center relative">
+              <img
+                class="h-full z-10 relative"
+                src="/public/banner_img/Lessons.svg"
+                alt="code_banner"
+              />
+            </picture>
+          </div>
+        </section>
+        <section></section>
+        <section></section>
+      </main>
+    </div>
   </body>
 </html>
