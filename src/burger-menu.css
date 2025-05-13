@@ -5,6 +5,12 @@
   cursor: pointer;
 }
 
+.burger-button.active {
+  position: fixed;
+  top: 42px;
+  right: 26px;
+}
+
 .btn-line {
   position: absolute;
   left: 50%;

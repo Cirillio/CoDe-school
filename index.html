@@ -70,35 +70,160 @@
   </head>
   <body class="bg-base-200 flex w-full justify-center min-h-dvh">
     <div
-      class="menu-list fixed shadow-sm shadow-neutral flex top-0 w-full max-h-dvh overflow-hidden transition-all bg-white z-40 lg:hidden"
+      class="menu-list fixed shadow-sm shadow-neutral flex top-0 w-full max-h-dvh overflow-hidden transition-all bg-white z-30 lg:hidden"
     >
-      <ul class="flex flex-col h-fit gap-4 text-xl font-medium p-20">
+      <ul class="flex flex-col w-full h-fit gap-4 text-xl font-medium p-14">
         <li
-          class="text-accent hover:text-primary active:text-primary transition-[color]"
+          class="text-accent w-full flex hover:text-primary active:text-primary transition-[color]"
         >
-          <a href="#">Чему вы научитесь</a>
+          <a class="w-full" href="#">Чему вы научитесь</a>
         </li>
         <li
-          class="text-accent hover:text-primary active:text-primary transition-[color]"
+          class="text-accent w-full flex hover:text-primary active:text-primary transition-[color]"
         >
-          <a href="#">Процесс обучения</a>
+          <a class="w-full" href="#">Процесс обучения</a>
         </li>
         <li
-          class="text-accent hover:text-primary active:text-primary transition-[color]"
+          class="text-accent w-full flex hover:text-primary active:text-primary transition-[color]"
         >
-          <a href="#">Стоимость</a>
+          <a class="w-full" href="#">Стоимость</a>
         </li>
         <li
-          class="text-accent hover:text-primary active:text-primary transition-[color]"
+          class="text-accent w-full flex hover:text-primary active:text-primary transition-[color]"
         >
-          <a href="#">Контакты</a>
+          <a class="w-full" href="#">Контакты</a>
         </li>
         <li
-          class="text-accent hover:text-primary active:text-primary transition-[color]"
+          class="text-accent w-full flex hover:text-primary active:text-primary transition-[color]"
         >
-          <a href="#">Регистрация</a>
+          <a class="w-full" href="#">Регистрация</a>
         </li>
       </ul>
+    </div>
+
+    <div
+      class="modal_fixed fixed top-1/2 bg-base-100 flex items-center justify-center w-full h-full left-1/2 z-50 translate-x-[-50%] translate-y-[-50%] opacity-0 pointer-events-none invisible transition-all duration-200"
+    >
+      <div
+        class="modal_feedback relative flex flex-col gap-4 sm:gap-11 px-4 sm:px-[53px] py-10 sm:py-[80px] items-center w-full max-w-[635px] h-fit bg-white shadow-sm shadow-neutral"
+      >
+        <button
+          class="close_modal_fixed cursor-pointer absolute top-4 right-4 text-neutral"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+              d="M20 20L4 4m16 0L4 20"
+            />
+          </svg>
+        </button>
+        <p class="sm:text-[32px] sm:leading-[30px] text-xl leading-[25px]">
+          Заказать звонок
+        </p>
+        <form
+          action="#"
+          method="post"
+          class="w-full max-w-md mx-auto space-y-2 sm:space-y-6 sm:text-md text-sm"
+        >
+          <div class="flex flex-col gap-2">
+            <label for="name" class="font-medium text-base-content">Имя</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Ваше имя"
+              required
+              class="w-full rounded-xl border border-neutral-300 px-4 py-3 focus:outline-none focus:ring-2 transition focus:ring-primary focus:border-transparent"
+            />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="phone" class="font-medium text-base-content"
+              >Телефон</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+7 XXX - XXX - XX -XX"
+              pattern="\+7\s\d{3}\s-\s\d{3}\s-\s\d{2}\s-\s\d{2}"
+              required
+              class="w-full rounded-xl border border-neutral-300 px-4 py-3 focus:outline-none focus:ring-2 transition focus:ring-primary focus:border-transparent"
+            />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="email" class="font-medium text-base-content"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="mail@site.com"
+              required
+              class="w-full rounded-xl border border-neutral-300 px-4 py-3 focus:outline-none focus:ring-2 transition focus:ring-primary focus:border-transparent"
+            />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="message" class="font-medium text-base-content"
+              >Сообщение</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Ваше сообщение ..."
+              required
+              class="w-full rounded-xl border border-neutral-300 px-4 py-3 resize-none focus:outline-none transition focus:ring-2 focus:ring-primary focus:border-transparent overflow-y-auto"
+            ></textarea>
+          </div>
+
+          <p class="sm:w-4/5 text-neutral-400">
+            Нажимая кнопку “Отправить”, соглашаюсь с
+            <a
+              href="/privacy-policy"
+              target="_blank"
+              class="text-primary hover:underline"
+            >
+              политикой конфиденциальности
+            </a>
+          </p>
+
+          <button
+            type="submit"
+            class="feedback_button flex w-[265px] py-7 px-[42px] my-4 text-white bg-primary hover:bg-secondary active:bg-secondary transition-[background] rounded-[82px] cursor-pointer"
+          >
+            <div class="flex h-[15px] mx-auto gap-3 items-center">
+              <span class="text-lg text-nowrap">Отправить</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M18 6L6 18M8 6h10v10"
+                />
+              </svg>
+            </div>
+          </button>
+        </form>
+      </div>
     </div>
     <div
       class="min-h-full flex flex-1 flex-col max-w-[1160px] mx-[10px] xl:mx-auto"
@@ -145,7 +270,7 @@
           >+7 (499) 348 93 96</a
         >
 
-        <div class="burger-button lg:hidden z-50">
+        <div class="burger-button lg:hidden z-40">
           <div class="btn-line top"><div class="line"></div></div>
           <div class="btn-line middle"><div class="line"></div></div>
           <div class="btn-line bottom"><div class="line"></div></div>
@@ -197,9 +322,9 @@
                 </p>
               </div>
               <button
-                class="flex max-w-[265px] py-7 px-[42px] my-4 text-white bg-primary hover:bg-secondary active:bg-secondary transition-[background] rounded-[82px] cursor-pointer"
+                class="feedback_button flex w-[265px] py-7 px-[42px] my-4 text-white bg-primary hover:bg-secondary active:bg-secondary transition-[background] rounded-[82px] cursor-pointer"
               >
-                <div class="flex h-[15px] gap-3 items-center">
+                <div class="flex h-[15px] gap-3 mx-auto items-center">
                   <span class="text-lg text-nowrap">Заказать звонок</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -464,24 +589,30 @@
         </section>
 
         <section
-          class="w-full min-h-[423px] rounded-[30px] relative overflow-hidden"
+          class="map w-full min-h-[423px] rounded-[30px] relative overflow-hidden"
         >
-          <div class="w-full h-full absolute opacity-100 z-10 top-0 left-0">
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3A5631fcca55f1a3f90e0a3192603cfb5ce8edd451a61d96cf3525bf6c343318cd&amp;source=constructor"
-              width="100%"
-              height="100%"
-              frameborder="0"
-            ></iframe>
-          </div>
+          <iframe
+            class="map-map w-full h-full absolute opacity-100 z-10 top-0 left-0"
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A5631fcca55f1a3f90e0a3192603cfb5ce8edd451a61d96cf3525bf6c343318cd&amp;source=constructor"
+            width="100%"
+            height="100%"
+            frameborder="0"
+          ></iframe>
           <div
-            class="flex flex-col gap-4 opacity-50 justify-center bg-base-100 text-neutral items-center w-full h-full"
+            class="map-no-map flex flex-col gap-4 opacity-50 justify-center bg-base-100 text-neutral items-center w-full h-full"
           >
             <p>
               Если карта не отображается, вероятно, доступ к ней блокирует
               браузер.
             </p>
             <p>Попробуйте с другого.</p>
+            <a
+              class="text-red-700"
+              href="https://yandex.ru/maps/?text=Депутатская+улица+46+Новосибирск"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Или нажмите сюда для прямого перехода к картам</a
+            >
           </div>
           <!-- <map name="map" id="map" class="h-[423px] w-full"></map> -->
         </section>
@@ -626,5 +757,6 @@
     </div>
 
     <script src="/src/main/burger.js"></script>
+    <script src="/src/main/modal_feedback.js"></script>
   </body>
 </html>
