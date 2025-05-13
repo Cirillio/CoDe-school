@@ -1,0 +1,49 @@
+.banner,
+.splide {
+  width: calc(100vw - 35px);
+  max-width: 1160px;
+  min-width: 300px;
+}
+
+.splide__track {
+  overflow: visible; /* Важно для корректного отображения */
+}
+
+/* Основные стили кнопок */
+.custom-arrow {
+  background-color: var(--color-primary) !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 1 !important;
+  transition: background-color 0.3s ease !important;
+  z-index: 20 !important;
+}
+
+.custom-arrow:hover {
+  background-color: var(--color-secondary) !important;
+}
+
+/* Иконки */
+.custom-arrow svg {
+  width: 24px;
+  height: 24px;
+  stroke: white !important;
+}
+
+/* Позиционирование */
+.splide__arrow--prev {
+  left: 1rem !important;
+}
+.splide__arrow--next {
+  right: 1rem !important;
+}
+
+/* Отключение дефолтных стилей Splide */
+.splide__arrow {
+  background: none !important;
+  border: none !important;
+}

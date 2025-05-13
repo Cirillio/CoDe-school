@@ -1,5 +1,4 @@
 @import url("/assets/fonts/gilroy/stylesheet.css");
-
 @import "tailwindcss";
 @theme {
   --font-display: "Gilroy";
