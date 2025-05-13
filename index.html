@@ -49,7 +49,7 @@
       }
     </script>
   </head>
-  <body class="bg-base-200 flex w-full min-h-dvh">
+  <body class="bg-base-200 flex w-full justify-center min-h-dvh">
     <style>
       .text-code {
         font-weight: 700;
@@ -69,7 +69,7 @@
       }
     </style>
     <div
-      class="min-h-full flex flex-1 flex-col max-w-[1160px] mx-[10px] lg:mx-auto"
+      class="min-h-full flex flex-1 flex-col max-w-[1160px] mx-[10px] xl:mx-auto"
     >
       <header
         class="w-full h-fit flex items-baseline bg-base-100 rounded-[75px] px-4 lg:px-8 py-2 lg:py-3 my-6"
@@ -84,16 +84,32 @@
         </a>
         <nav class="lg:block min-[100px]:hidden ml-12">
           <ul class="flex gap-10 text-sm font-normal">
-            <li><a href="#">Чему вы научитесь</a></li>
-            <li><a href="#">Процесс обучения</a></li>
-            <li><a href="#">Стоимость</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li
+              class="text-accent hover:text-primary active:text-primary transition-[color]"
+            >
+              <a href="#">Чему вы научитесь</a>
+            </li>
+            <li
+              class="text-accent hover:text-primary active:text-primary transition-[color]"
+            >
+              <a href="#">Процесс обучения</a>
+            </li>
+            <li
+              class="text-accent hover:text-primary active:text-primary transition-[color]"
+            >
+              <a href="#">Стоимость</a>
+            </li>
+            <li
+              class="text-accent hover:text-primary active:text-primary transition-[color]"
+            >
+              <a href="#">Контакты</a>
+            </li>
           </ul>
         </nav>
 
         <a
           href="tel:+7 (499) 348 93 96"
-          class="text-secondary text-[16px] mx-auto lg:mr-0 lg:ml-auto"
+          class="text-secondary text-[16px] mx-auto lg:mr-0 lg:ml-auto hover:border-secondary active:border-secondary border-b border-base-100 transition-[border]"
           >+7 (499) 348 93 96</a
         >
 
@@ -101,7 +117,9 @@
           <img src="/assets/icons/burger.svg" alt="burger_icon" />
         </button>
       </header>
-      <main class="w-full flex flex-col gap-[60px] h-full border-amber-500">
+      <main
+        class="w-full flex flex-col gap-[60px] pb-[60px] h-full border-amber-500"
+      >
         <section
           class="banner w-full overflow-hidden relative h-fit px-2 md:px-10 py-8 lg:pt-[60px] lg:pb-10 rounded-[48px] bg-base-100"
         >
@@ -145,7 +163,7 @@
                 </p>
               </div>
               <button
-                class="flex max-w-[265px] py-7 px-[42px] my-4 text-white bg-primary rounded-[82px] cursor-pointer"
+                class="flex max-w-[265px] py-7 px-[42px] my-4 text-white bg-primary hover:bg-secondary active:bg-secondary transition-[background] rounded-[82px] cursor-pointer"
               >
                 <div class="flex h-[15px] gap-3 items-center">
                   <span class="text-lg text-nowrap">Заказать звонок</span>
@@ -421,6 +439,143 @@
           <!-- <map name="map" id="map" class="h-[423px] w-full"></map> -->
         </section>
       </main>
+      <footer class="w-full flex flex-col">
+        <div class="w-full flex gap-10 flex-col sm:flex-row">
+          <div
+            class="flex flex-1 h-full items-center sm:items-start flex-col gap-9"
+          >
+            <span class="flex gap-[10px] justify-center items-baseline-last">
+              <a href="/" class="w-fit flex">
+                <div class="logo flex font-medium text-4xl">
+                  <span class="text-secondary">C</span>
+                  <span class="text-accent">o</span>
+                  <span class="text-primary">D</span>
+                  <span class="text-accent">e</span>
+                </div>
+              </a>
+              <span class="text-[16px] leading-[19px] text-neutral"
+                >Школа <br />
+                программирования</span
+              >
+            </span>
+            <div class="flex gap-4">
+              <a href="https://instagram.com">
+                <picture
+                  class="rounded-full w-[34px] aspect-square flex items-center justify-center bg-accent hover:bg-primary active:bg-primary transition-[background]"
+                >
+                  <img
+                    src="/assets/icons/ins.svg"
+                    alt="instagram_link"
+                    class="object-contain w-[18px] h-[18px]"
+                  />
+                </picture>
+              </a>
+              <a href="https://facebook.com">
+                <picture
+                  class="rounded-full w-[34px] aspect-square flex items-center justify-center bg-accent hover:bg-primary active:bg-primary transition-[background]"
+                >
+                  <img
+                    src="/assets/icons/fb.svg"
+                    alt="instagram_link"
+                    class="object-contain w-[18px] h-[18px]"
+                  />
+                </picture>
+              </a>
+              <a href="https://vk.com">
+                <picture
+                  class="rounded-full w-[34px] aspect-square flex items-center justify-center bg-accent hover:bg-primary active:bg-primary transition-[background]"
+                >
+                  <img
+                    src="/assets/icons/vk.svg"
+                    alt="instagram_link"
+                    class="object-contain w-[18px] h-[18px]"
+                  />
+                </picture>
+              </a>
+              <a href="https://youtube.com">
+                <picture
+                  class="rounded-full w-[34px] aspect-square flex items-center justify-center bg-accent hover:bg-primary active:bg-primary transition-[background]"
+                >
+                  <img
+                    src="/assets/icons/yt.svg"
+                    alt="instagram_link"
+                    class="object-contain w-[18px] h-[18px]"
+                  />
+                </picture>
+              </a>
+            </div>
+          </div>
+          <div class="flex-1 flex gap-10 flex-col sm:flex-row">
+            <nav class="mx-auto">
+              <ul
+                class="flex flex-col gap-6 text-sm text-center sm:text-start font-normal"
+              >
+                <li
+                  class="text-accent hover:text-primary transition-[color] active:text-primary"
+                >
+                  <a href="#">Чему вы научитесь</a>
+                </li>
+                <li
+                  class="text-accent hover:text-primary transition-[color] active:text-primary"
+                >
+                  <a href="#">Процесс обучения</a>
+                </li>
+                <li
+                  class="text-accent hover:text-primary transition-[color] active:text-primary"
+                >
+                  <a href="#">Стоимость</a>
+                </li>
+                <li
+                  class="text-accent hover:text-primary transition-[color] active:text-primary"
+                >
+                  <a href="#">Контакты</a>
+                </li>
+                <li
+                  class="text-accent hover:text-primary transition-[color] active:text-primary"
+                >
+                  <a href="#">Регистрация</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="flex-col sm:items-start items-center flex gap-2">
+              <a
+                href="tel:+7 (499) 348 93 96"
+                class="text-secondary text-[16px] w-fit hover:border-secondary border-b active:border-secondary border-base-200 transition-[border]"
+                >+7 (499) 348 93 96</a
+              >
+              <a
+                class="w-fit text-accent hover:border-accent active:border-accent border-b border-base-200 transition-[border]"
+                href="mailto:info@code.ru"
+                >info@code.ru</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-[1px] bg-neutral mt-12"></div>
+        <div
+          class="flex py-6 w-full flex-col sm:flex-row gap-2 justify-between items-center sm:items-baseline text-neutral text-xs sm:text-[16px] leading-[23px]"
+        >
+          <a
+            class="hover:text-primary transition-[color] active:text-primary"
+            href="#"
+            >© 2023 — Все права защищены</a
+          >
+          <div
+            class="flex sm:ml-auto flex-col sm:flex-row w-fit items-baseline gap-0 sm:gap-16"
+          >
+            <a
+              class="hover:text-primary transition-[color] active:text-primary"
+              href="#"
+              >Пользовательское соглашение</a
+            >
+            <a
+              class="hover:text-primary transition-[color] active:text-primary"
+              href="#"
+              >Политика конфиденциальности</a
+            >
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
