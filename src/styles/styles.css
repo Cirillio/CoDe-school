@@ -1,6 +1,6 @@
-@import url("/src/fonts/gilroy/stylesheet.css");
-@import "tailwindcss";
+@import url("/assets/fonts/gilroy/stylesheet.css");
 
+@import "tailwindcss";
 @theme {
   --font-display: "Gilroy";
 

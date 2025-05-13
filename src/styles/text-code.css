@@ -1,0 +1,16 @@
+.text-code {
+  font-weight: 700;
+  position: relative;
+  @media (min-width: 768px) {
+    &::before {
+      content: "{";
+      color: var(--color-primary);
+      font-weight: 400;
+    }
+    &::after {
+      content: "}";
+      color: var(--color-primary);
+      font-weight: 400;
+    }
+  }
+}

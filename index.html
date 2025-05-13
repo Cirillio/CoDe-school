@@ -4,69 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CoDe</title>
-    <link rel="stylesheet" href="/src/styles.css" />
-    <link rel="stylesheet" href="/src/info_card.css" />
-    <link rel="stylesheet" href="/src/burger-menu.css" />
-    <script
-      src="https://api-maps.yandex.ru/v3/?apikey=53f19926-65a4-4ebe-a7c4-354ad2c01e6b&lang=ru_RU"
-      type="text/javascript"
-      defer
-    ></script>
-    <!-- По какой-то причине скрипт не хочет загружаться ^ -->
-    <script>
-      initMap();
-
-      // функция асинхронная, так как она может занимать много времени в основном потоке
-      // *зависит от соединения, стабильности API и другого
-      async function initMap() {
-        // основной объект для загрузки других объектов карты
-        await ymaps3.ready;
-        const { YMap, YMapDefaultSchemeLayer } = ymaps3;
-
-        // подложка, на которой будут располагаться маркеры
-        const map = new YMap(document.getElementById("map"), {
-          location: {
-            // Координаты центра карты
-            center: [55.037254, 82.911177],
-
-            // Уровень масштабирования
-            zoom: 16,
-          },
-        });
-        const placemark = new ymaps.Placemark(
-          [55.037254, 82.911177],
-          {
-            balloonContent: "Депутатская улица, 46",
-          },
-          {
-            preset: "islands#redIcon",
-          }
-        );
-
-        map.geoObjects.add(placemark);
-
-        map.addChild(new YMapDefaultSchemeLayer());
-      }
-    </script>
-    <style>
-      .text-code {
-        font-weight: 700;
-        position: relative;
-        @media (min-width: 768px) {
-          &::before {
-            content: "{";
-            color: var(--color-primary);
-            font-weight: 400;
-          }
-          &::after {
-            content: "}";
-            color: var(--color-primary);
-            font-weight: 400;
-          }
-        }
-      }
-    </style>
+    <title>CoDe - Школа программирования</title>
+    <link rel="stylesheet" href="/src/styles/styles.css" />
+    <link rel="stylesheet" href="/src/styles/info_card.css" />
+    <link rel="stylesheet" href="/src/styles/burger-menu.css" />
+    <link rel="stylesheet" href="/src/styles/text-code.css" />
+    <script type="module" src="/index.js"></script>
   </head>
   <body class="bg-base-200 flex w-full justify-center min-h-dvh">
     <div
@@ -226,7 +169,7 @@
       </div>
     </div>
     <div
-      class="min-h-full flex flex-1 flex-col max-w-[1160px] mx-[10px] xl:mx-auto"
+      class="min-h-full flex flex-1 flex-col max-w-[1160px] mx-[10px] xl:mx-0"
     >
       <header
         class="w-full h-fit flex items-baseline bg-base-100 rounded-[75px] px-4 lg:px-8 py-2 lg:py-3 my-6"
@@ -429,7 +372,7 @@
             <div class="info-card">
               <div class="info-card__content">
                 <picture class="info-card__icon">
-                  <img src="/info_blocks/flex.svg" alt="flex" />
+                  <img src="/info_blocks/communicate.svg" alt="communicate" />
                 </picture>
                 <span class="info-card__text">
                   <h3 class="info-card__title">
@@ -541,51 +484,61 @@
         <section
           class="w-full grid sm:grid-cols-4 sm:grid-row-2 grid-cols-2 grid-row-4 gap-[10px] lg:gap-[18px]"
         >
-          <picture
+          <a
+            data-fancybox="gallery"
+            href="gallery/1.png"
             class="col-span-2 row-span-2 w-full flex h-full rounded-[30px] overflow-hidden"
           >
             <img
               class="flex flex-1 w-full h-full object-center object-cover"
-              src="/public/gallery/1.png"
+              src="/gallery/1.png"
               alt="gallery1"
             />
-          </picture>
-          <picture
+          </a>
+          <a
+            data-fancybox="gallery"
+            href="gallery/2.png"
             class="sm:col-start-3 sm:row-start-1 col-start-1 row-start-3 w-full flex h-full rounded-[30px] overflow-hidden"
           >
             <img
               class="flex flex-1 w-full h-full object-center object-cover"
-              src="/public/gallery/2.png"
+              src="/gallery/2.png"
               alt="gallery2"
             />
-          </picture>
-          <picture
+          </a>
+          <a
+            data-fancybox="gallery"
+            href="gallery/3.png"
             class="sm:col-start-4 sm:row-start-1 col-start-2 row-start-3 w-full flex h-full rounded-[30px] overflow-hidden"
           >
             <img
               class="flex flex-1 w-full h-full object-center object-cover"
-              src="/public/gallery/3.png"
+              src="/gallery/3.png"
               alt="gallery3"
             />
-          </picture>
-          <picture
+          </a>
+          <a
+            data-fancybox="gallery"
+            href="gallery/4.png"
             class="sm:col-start-3 sm:row-start-2 col-start-1 row-start-4 w-full flex h-full rounded-[30px] overflow-hidden"
           >
             <img
               class="flex flex-1 w-full h-full object-center object-cover"
-              src="/public/gallery/4.png"
+              src="/gallery/4.png"
               alt="gallery4"
             />
-          </picture>
-          <picture
+          </a>
+          <a
+            data-fancybox="gallery"
+            href="gallery/5.png"
             class="sm:col-start-4 sm:row-start-2 col-start-2 row-start-4 w-full flex h-full rounded-[30px] overflow-hidden"
           >
             <img
               class="flex flex-1 w-full h-full object-center object-cover"
-              src="/public/gallery/5.png"
+              src="/gallery/5.png"
               alt="gallery5"
             />
-          </picture>
+          </a>
         </section>
 
         <section
@@ -755,8 +708,5 @@
         </div>
       </footer>
     </div>
-
-    <script src="/src/main/burger.js"></script>
-    <script src="/src/main/modal_feedback.js"></script>
   </body>
 </html>
