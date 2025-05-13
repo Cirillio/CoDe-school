@@ -7,6 +7,7 @@
     <title>CoDe</title>
     <link rel="stylesheet" href="/src/styles.css" />
     <link rel="stylesheet" href="/src/info_card.css" />
+    <link rel="stylesheet" href="/src/burger-menu.css" />
     <script
       src="https://api-maps.yandex.ru/v3/?apikey=53f19926-65a4-4ebe-a7c4-354ad2c01e6b&lang=ru_RU"
       type="text/javascript"
@@ -48,8 +49,6 @@
         map.addChild(new YMapDefaultSchemeLayer());
       }
     </script>
-  </head>
-  <body class="bg-base-200 flex w-full justify-center min-h-dvh">
     <style>
       .text-code {
         font-weight: 700;
@@ -68,6 +67,39 @@
         }
       }
     </style>
+  </head>
+  <body class="bg-base-200 flex w-full justify-center min-h-dvh">
+    <div
+      class="menu-list fixed shadow-sm shadow-neutral flex top-0 w-full max-h-dvh overflow-hidden transition-all bg-white z-40 lg:hidden"
+    >
+      <ul class="flex flex-col h-fit gap-4 text-xl font-medium p-20">
+        <li
+          class="text-accent hover:text-primary active:text-primary transition-[color]"
+        >
+          <a href="#">Чему вы научитесь</a>
+        </li>
+        <li
+          class="text-accent hover:text-primary active:text-primary transition-[color]"
+        >
+          <a href="#">Процесс обучения</a>
+        </li>
+        <li
+          class="text-accent hover:text-primary active:text-primary transition-[color]"
+        >
+          <a href="#">Стоимость</a>
+        </li>
+        <li
+          class="text-accent hover:text-primary active:text-primary transition-[color]"
+        >
+          <a href="#">Контакты</a>
+        </li>
+        <li
+          class="text-accent hover:text-primary active:text-primary transition-[color]"
+        >
+          <a href="#">Регистрация</a>
+        </li>
+      </ul>
+    </div>
     <div
       class="min-h-full flex flex-1 flex-col max-w-[1160px] mx-[10px] xl:mx-auto"
     >
@@ -113,9 +145,11 @@
           >+7 (499) 348 93 96</a
         >
 
-        <button class="cursor-pointer block lg:hidden">
-          <img src="/assets/icons/burger.svg" alt="burger_icon" />
-        </button>
+        <div class="burger-button lg:hidden z-50">
+          <div class="btn-line top"><div class="line"></div></div>
+          <div class="btn-line middle"><div class="line"></div></div>
+          <div class="btn-line bottom"><div class="line"></div></div>
+        </div>
       </header>
       <main
         class="w-full flex flex-col gap-[60px] pb-[60px] h-full border-amber-500"
@@ -429,13 +463,26 @@
           </picture>
         </section>
 
-        <section class="w-full min-h-[423px] rounded-[30px] overflow-hidden">
-          <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A5631fcca55f1a3f90e0a3192603cfb5ce8edd451a61d96cf3525bf6c343318cd&amp;source=constructor"
-            width="100%"
-            height="100%"
-            frameborder="0"
-          ></iframe>
+        <section
+          class="w-full min-h-[423px] rounded-[30px] relative overflow-hidden"
+        >
+          <div class="w-full h-full absolute opacity-100 z-10 top-0 left-0">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A5631fcca55f1a3f90e0a3192603cfb5ce8edd451a61d96cf3525bf6c343318cd&amp;source=constructor"
+              width="100%"
+              height="100%"
+              frameborder="0"
+            ></iframe>
+          </div>
+          <div
+            class="flex flex-col gap-4 opacity-50 justify-center bg-base-100 text-neutral items-center w-full h-full"
+          >
+            <p>
+              Если карта не отображается, вероятно, доступ к ней блокирует
+              браузер.
+            </p>
+            <p>Попробуйте с другого.</p>
+          </div>
           <!-- <map name="map" id="map" class="h-[423px] w-full"></map> -->
         </section>
       </main>
@@ -577,5 +624,7 @@
         </div>
       </footer>
     </div>
+
+    <script src="/src/main/burger.js"></script>
   </body>
 </html>
