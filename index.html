@@ -7,6 +7,47 @@
     <title>CoDe</title>
     <link rel="stylesheet" href="/src/styles.css" />
     <link rel="stylesheet" href="/src/info_card.css" />
+    <script
+      src="https://api-maps.yandex.ru/v3/?apikey=53f19926-65a4-4ebe-a7c4-354ad2c01e6b&lang=ru_RU"
+      type="text/javascript"
+      defer
+    ></script>
+    <!-- По какой-то причине скрипт не хочет загружаться ^ -->
+    <script>
+      initMap();
+
+      // функция асинхронная, так как она может занимать много времени в основном потоке
+      // *зависит от соединения, стабильности API и другого
+      async function initMap() {
+        // основной объект для загрузки других объектов карты
+        await ymaps3.ready;
+        const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+
+        // подложка, на которой будут располагаться маркеры
+        const map = new YMap(document.getElementById("map"), {
+          location: {
+            // Координаты центра карты
+            center: [55.037254, 82.911177],
+
+            // Уровень масштабирования
+            zoom: 16,
+          },
+        });
+        const placemark = new ymaps.Placemark(
+          [55.037254, 82.911177],
+          {
+            balloonContent: "Депутатская улица, 46",
+          },
+          {
+            preset: "islands#redIcon",
+          }
+        );
+
+        map.geoObjects.add(placemark);
+
+        map.addChild(new YMapDefaultSchemeLayer());
+      }
+    </script>
   </head>
   <body class="bg-base-200 flex w-full min-h-dvh">
     <style>
@@ -368,6 +409,16 @@
               alt="gallery5"
             />
           </picture>
+        </section>
+
+        <section class="w-full min-h-[423px] rounded-[30px] overflow-hidden">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A5631fcca55f1a3f90e0a3192603cfb5ce8edd451a61d96cf3525bf6c343318cd&amp;source=constructor"
+            width="100%"
+            height="100%"
+            frameborder="0"
+          ></iframe>
+          <!-- <map name="map" id="map" class="h-[423px] w-full"></map> -->
         </section>
       </main>
     </div>
