@@ -5,9 +5,50 @@
     <link rel="icon" type="image/svg+xml" href="/kontur-mockup/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CoDe</title>
-    <link rel="stylesheet" crossorigin href="/kontur-mockup/assets/index-C2L0jql9.css">
+    <script
+      src="https://api-maps.yandex.ru/v3/?apikey=53f19926-65a4-4ebe-a7c4-354ad2c01e6b&lang=ru_RU"
+      type="text/javascript"
+      defer
+    ></script>
+    <!-- По какой-то причине скрипт не хочет загружаться ^ -->
+    <script>
+      initMap();
+
+      // функция асинхронная, так как она может занимать много времени в основном потоке
+      // *зависит от соединения, стабильности API и другого
+      async function initMap() {
+        // основной объект для загрузки других объектов карты
+        await ymaps3.ready;
+        const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+
+        // подложка, на которой будут располагаться маркеры
+        const map = new YMap(document.getElementById("map"), {
+          location: {
+            // Координаты центра карты
+            center: [55.037254, 82.911177],
+
+            // Уровень масштабирования
+            zoom: 16,
+          },
+        });
+        const placemark = new ymaps.Placemark(
+          [55.037254, 82.911177],
+          {
+            balloonContent: "Депутатская улица, 46",
+          },
+          {
+            preset: "islands#redIcon",
+          }
+        );
+
+        map.geoObjects.add(placemark);
+
+        map.addChild(new YMapDefaultSchemeLayer());
+      }
+    </script>
+    <link rel="stylesheet" crossorigin href="/kontur-mockup/assets/index-Bgij6Dyc.css">
   </head>
-  <body class="bg-base-200 flex w-full min-h-dvh">
+  <body class="bg-base-200 flex w-full justify-center min-h-dvh">
     <style>
       .text-code {
         font-weight: 700;
@@ -27,7 +68,7 @@
       }
     </style>
     <div
-      class="min-h-full flex flex-1 flex-col max-w-[1160px] mx-[10px] lg:mx-auto"
+      class="min-h-full flex flex-1 flex-col max-w-[1160px] mx-[10px] xl:mx-auto"
     >
       <header
         class="w-full h-fit flex items-baseline bg-base-100 rounded-[75px] px-4 lg:px-8 py-2 lg:py-3 my-6"
@@ -42,16 +83,32 @@
         </a>
         <nav class="lg:block min-[100px]:hidden ml-12">
           <ul class="flex gap-10 text-sm font-normal">
-            <li><a href="#">Чему вы научитесь</a></li>
-            <li><a href="#">Процесс обучения</a></li>
-            <li><a href="#">Стоимость</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li
+              class="text-accent hover:text-primary active:text-primary transition-[color]"
+            >
+              <a href="#">Чему вы научитесь</a>
+            </li>
+            <li
+              class="text-accent hover:text-primary active:text-primary transition-[color]"
+            >
+              <a href="#">Процесс обучения</a>
+            </li>
+            <li
+              class="text-accent hover:text-primary active:text-primary transition-[color]"
+            >
+              <a href="#">Стоимость</a>
+            </li>
+            <li
+              class="text-accent hover:text-primary active:text-primary transition-[color]"
+            >
+              <a href="#">Контакты</a>
+            </li>
           </ul>
         </nav>
 
         <a
           href="tel:+7 (499) 348 93 96"
-          class="text-secondary text-[16px] mx-auto lg:mr-0 lg:ml-auto"
+          class="text-secondary text-[16px] mx-auto lg:mr-0 lg:ml-auto hover:border-secondary active:border-secondary border-b border-base-100 transition-[border]"
           >+7 (499) 348 93 96</a
         >
 
@@ -59,7 +116,9 @@
           <img src="data:image/svg+xml,%3csvg%20width='17'%20height='14'%20viewBox='0%200%2017%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='17'%20height='2'%20rx='1'%20fill='%23F15525'/%3e%3crect%20y='6'%20width='17'%20height='2'%20rx='1'%20fill='%23F15525'/%3e%3crect%20y='12'%20width='17'%20height='2'%20rx='1'%20fill='%23F15525'/%3e%3c/svg%3e" alt="burger_icon" />
         </button>
       </header>
-      <main class="w-full flex flex-col gap-[60px] h-full border-amber-500">
+      <main
+        class="w-full flex flex-col gap-[60px] pb-[60px] h-full border-amber-500"
+      >
         <section
           class="banner w-full overflow-hidden relative h-fit px-2 md:px-10 py-8 lg:pt-[60px] lg:pb-10 rounded-[48px] bg-base-100"
         >
@@ -103,7 +162,7 @@
                 </p>
               </div>
               <button
-                class="flex max-w-[265px] py-7 px-[42px] my-4 text-white bg-primary rounded-[82px] cursor-pointer"
+                class="flex max-w-[265px] py-7 px-[42px] my-4 text-white bg-primary hover:bg-secondary active:bg-secondary transition-[background] rounded-[82px] cursor-pointer"
               >
                 <div class="flex h-[15px] gap-3 items-center">
                   <span class="text-lg text-nowrap">Заказать звонок</span>
@@ -319,7 +378,203 @@
             </div>
           </div>
         </section>
+        <section
+          class="w-full grid sm:grid-cols-4 sm:grid-row-2 grid-cols-2 grid-row-4 gap-[10px] lg:gap-[18px]"
+        >
+          <picture
+            class="col-span-2 row-span-2 w-full flex h-full rounded-[30px] overflow-hidden"
+          >
+            <img
+              class="flex flex-1 w-full h-full object-center object-cover"
+              src="/kontur-mockup/assets/1-BlwCmpGN.png"
+              alt="gallery1"
+            />
+          </picture>
+          <picture
+            class="sm:col-start-3 sm:row-start-1 col-start-1 row-start-3 w-full flex h-full rounded-[30px] overflow-hidden"
+          >
+            <img
+              class="flex flex-1 w-full h-full object-center object-cover"
+              src="/kontur-mockup/assets/2-DENAsP-d.png"
+              alt="gallery2"
+            />
+          </picture>
+          <picture
+            class="sm:col-start-4 sm:row-start-1 col-start-2 row-start-3 w-full flex h-full rounded-[30px] overflow-hidden"
+          >
+            <img
+              class="flex flex-1 w-full h-full object-center object-cover"
+              src="/kontur-mockup/assets/3-DgkWGy9m.png"
+              alt="gallery3"
+            />
+          </picture>
+          <picture
+            class="sm:col-start-3 sm:row-start-2 col-start-1 row-start-4 w-full flex h-full rounded-[30px] overflow-hidden"
+          >
+            <img
+              class="flex flex-1 w-full h-full object-center object-cover"
+              src="/kontur-mockup/assets/4-D9talcfD.png"
+              alt="gallery4"
+            />
+          </picture>
+          <picture
+            class="sm:col-start-4 sm:row-start-2 col-start-2 row-start-4 w-full flex h-full rounded-[30px] overflow-hidden"
+          >
+            <img
+              class="flex flex-1 w-full h-full object-center object-cover"
+              src="/kontur-mockup/assets/5-CDBvI-tc.png"
+              alt="gallery5"
+            />
+          </picture>
+        </section>
+
+        <section class="w-full min-h-[423px] rounded-[30px] overflow-hidden">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A5631fcca55f1a3f90e0a3192603cfb5ce8edd451a61d96cf3525bf6c343318cd&amp;source=constructor"
+            width="100%"
+            height="100%"
+            frameborder="0"
+          ></iframe>
+          <!-- <map name="map" id="map" class="h-[423px] w-full"></map> -->
+        </section>
       </main>
+      <footer class="w-full flex flex-col">
+        <div class="w-full flex gap-10 flex-col sm:flex-row">
+          <div
+            class="flex flex-1 h-full items-center sm:items-start flex-col gap-9"
+          >
+            <span class="flex gap-[10px] justify-center items-baseline-last">
+              <a href="/" class="w-fit flex">
+                <div class="logo flex font-medium text-4xl">
+                  <span class="text-secondary">C</span>
+                  <span class="text-accent">o</span>
+                  <span class="text-primary">D</span>
+                  <span class="text-accent">e</span>
+                </div>
+              </a>
+              <span class="text-[16px] leading-[19px] text-neutral"
+                >Школа <br />
+                программирования</span
+              >
+            </span>
+            <div class="flex gap-4">
+              <a href="https://instagram.com">
+                <picture
+                  class="rounded-full w-[34px] aspect-square flex items-center justify-center bg-accent hover:bg-primary active:bg-primary transition-[background]"
+                >
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='19'%20height='19'%20viewBox='0%200%2019%2019'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M13.4009%200.686279H5.21216C2.54708%200.686279%200.378906%202.85443%200.378906%205.51952V13.7084C0.378906%2016.3734%202.54708%2018.5416%205.21216%2018.5416H13.4011C16.0659%2018.5416%2018.2341%2016.3734%2018.2341%2013.7084V5.51952C18.2341%202.85443%2016.0659%200.686279%2013.4009%200.686279ZM9.30652%2014.4961C6.61446%2014.4961%204.42438%2012.306%204.42438%209.61389C4.42438%206.92181%206.61446%204.73174%209.30652%204.73174C11.9986%204.73174%2014.1888%206.92181%2014.1888%209.61389C14.1888%2012.306%2011.9986%2014.4961%209.30652%2014.4961ZM14.3054%205.88312C13.5099%205.88312%2012.8628%205.23604%2012.8628%204.44049C12.8628%203.64495%2013.5099%202.99773%2014.3054%202.99773C15.101%202.99773%2015.7481%203.64495%2015.7481%204.44049C15.7481%205.23604%2015.101%205.88312%2014.3054%205.88312Z'%20fill='white'/%3e%3cpath%20d='M9.3061%205.77881C7.19133%205.77881%205.4707%207.49932%205.4707%209.61421C5.4707%2011.7289%207.19133%2013.4496%209.3061%2013.4496C11.421%2013.4496%2013.1414%2011.7289%2013.1414%209.61421C13.1414%207.49932%2011.421%205.77881%209.3061%205.77881Z'%20fill='white'/%3e%3cpath%20d='M14.306%204.04443C14.0878%204.04443%2013.9102%204.22207%2013.9102%204.44029C13.9102%204.65854%2014.0878%204.83617%2014.306%204.83617C14.5243%204.83617%2014.7021%204.65866%2014.7021%204.44029C14.7021%204.22193%2014.5243%204.04443%2014.306%204.04443Z'%20fill='white'/%3e%3c/svg%3e"
+                    alt="instagram_link"
+                    class="object-contain w-[18px] h-[18px]"
+                  />
+                </picture>
+              </a>
+              <a href="https://facebook.com">
+                <picture
+                  class="rounded-full w-[34px] aspect-square flex items-center justify-center bg-accent hover:bg-primary active:bg-primary transition-[background]"
+                >
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='9'%20height='17'%20viewBox='0%200%209%2017'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.21929%203.91325H8.24522V0.973389H5.86365V0.983989C2.97786%201.0844%202.3864%202.67783%202.33428%204.35141H2.32833V5.81944H0.363281V8.69845H2.32833V16.4158H5.28979V8.69845H7.7158L8.18427%205.81944H5.29076V4.93249C5.29076%204.3669%205.67391%203.91325%206.21929%203.91325Z'%20fill='white'/%3e%3c/svg%3e"
+                    alt="instagram_link"
+                    class="object-contain w-[18px] h-[18px]"
+                  />
+                </picture>
+              </a>
+              <a href="https://vk.com">
+                <picture
+                  class="rounded-full w-[34px] aspect-square flex items-center justify-center bg-accent hover:bg-primary active:bg-primary transition-[background]"
+                >
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='20'%20height='11'%20viewBox='0%200%2020%2011'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M9.85008%2010.9579H10.9654C10.9654%2010.9579%2011.3023%2010.9211%2011.4743%2010.736C11.6326%2010.5663%2011.6276%2010.2475%2011.6276%2010.2475C11.6276%2010.2475%2011.6058%208.75492%2012.3004%208.53507C12.9851%208.31863%2013.8644%209.97771%2014.7964%2010.6156C15.501%2011.0983%2016.0364%2010.9925%2016.0364%2010.9925L18.5285%2010.9579C18.5285%2010.9579%2019.8319%2010.8779%2019.2138%209.85562C19.1633%209.77194%2018.8539%209.09949%2017.3612%207.71754C15.7987%206.27117%2016.0079%206.50511%2017.89%204.00321C19.0364%202.47953%2019.4946%201.54929%2019.3514%201.15087C19.2148%200.771405%2018.3718%200.871718%2018.3718%200.871718L15.5662%200.889137C15.5662%200.889137%2015.3582%200.860857%2015.2039%200.952802C15.0532%201.043%2014.9561%201.2532%2014.9561%201.2532C14.9561%201.2532%2014.5121%202.43228%2013.9198%203.43501C12.6705%205.55088%2012.1709%205.66256%2011.9668%205.53119C11.4918%205.22498%2011.6104%204.30108%2011.6104%203.6447C11.6104%201.59427%2011.9222%200.739322%2011.0032%200.518017C10.6982%200.444497%2010.4737%200.396%209.69376%200.388155C8.69266%200.377796%207.84532%200.391192%207.36554%200.625632C7.04637%200.781523%206.80015%201.12891%206.9501%201.14886C7.13554%201.17362%207.55552%201.26179%207.7782%201.5642C8.06572%201.95428%208.05558%202.83045%208.05558%202.83045C8.05558%202.83045%208.22074%205.24418%207.66978%205.54406C7.29157%205.74971%206.77279%205.32983%205.65895%203.41026C5.08824%202.42696%204.65734%201.34012%204.65734%201.34012C4.65734%201.34012%204.57427%201.13699%204.42606%201.02835C4.24621%200.896721%203.99492%200.854781%203.99492%200.854781L1.32878%200.872221C1.32878%200.872221%200.928533%200.883344%200.781614%201.0569C0.650907%201.21126%200.771234%201.5306%200.771234%201.5306C0.771234%201.5306%202.85854%206.40101%205.22199%208.8555C7.38911%2011.1058%209.85008%2010.9579%209.85008%2010.9579Z'%20fill='white'/%3e%3c/svg%3e"
+                    alt="instagram_link"
+                    class="object-contain w-[18px] h-[18px]"
+                  />
+                </picture>
+              </a>
+              <a href="https://youtube.com">
+                <picture
+                  class="rounded-full w-[34px] aspect-square flex items-center justify-center bg-accent hover:bg-primary active:bg-primary transition-[background]"
+                >
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='21'%20height='15'%20viewBox='0%200%2021%2015'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M19.474%201.66979C18.7645%200.82643%2017.4547%200.482422%2014.9531%200.482422H5.87262C3.31384%200.482422%201.9818%200.848617%201.27502%201.7465C0.585937%202.62193%200.585938%203.91181%200.585938%205.69703V9.09964C0.585938%2012.5583%201.40353%2014.3142%205.87262%2014.3142H14.9531C17.1225%2014.3142%2018.3245%2014.0107%2019.1022%2013.2664C19.8997%2012.5031%2020.24%2011.2569%2020.24%209.09964V5.69703C20.24%203.81436%2020.1866%202.51687%2019.474%201.66979ZM13.2038%207.8681L9.08047%2010.0231C8.98829%2010.0713%208.88748%2010.0952%208.78679%2010.0952C8.67281%2010.0952%208.55907%2010.0646%208.45833%2010.0035C8.26863%209.88859%208.1528%209.683%208.1528%209.46121V5.16497C8.1528%204.94358%208.26832%204.73817%208.45763%204.62316C8.64701%204.50814%208.88254%204.50029%209.07901%204.60236L13.2025%206.74351C13.4123%206.85242%2013.544%207.06901%2013.5444%207.30529C13.5446%207.54179%2013.4135%207.75867%2013.2038%207.8681Z'%20fill='white'/%3e%3c/svg%3e"
+                    alt="instagram_link"
+                    class="object-contain w-[18px] h-[18px]"
+                  />
+                </picture>
+              </a>
+            </div>
+          </div>
+          <div class="flex-1 flex gap-10 flex-col sm:flex-row">
+            <nav class="mx-auto">
+              <ul
+                class="flex flex-col gap-6 text-sm text-center sm:text-start font-normal"
+              >
+                <li
+                  class="text-accent hover:text-primary transition-[color] active:text-primary"
+                >
+                  <a href="#">Чему вы научитесь</a>
+                </li>
+                <li
+                  class="text-accent hover:text-primary transition-[color] active:text-primary"
+                >
+                  <a href="#">Процесс обучения</a>
+                </li>
+                <li
+                  class="text-accent hover:text-primary transition-[color] active:text-primary"
+                >
+                  <a href="#">Стоимость</a>
+                </li>
+                <li
+                  class="text-accent hover:text-primary transition-[color] active:text-primary"
+                >
+                  <a href="#">Контакты</a>
+                </li>
+                <li
+                  class="text-accent hover:text-primary transition-[color] active:text-primary"
+                >
+                  <a href="#">Регистрация</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="flex-col sm:items-start items-center flex gap-2">
+              <a
+                href="tel:+7 (499) 348 93 96"
+                class="text-secondary text-[16px] w-fit hover:border-secondary border-b active:border-secondary border-base-200 transition-[border]"
+                >+7 (499) 348 93 96</a
+              >
+              <a
+                class="w-fit text-accent hover:border-accent active:border-accent border-b border-base-200 transition-[border]"
+                href="mailto:info@code.ru"
+                >info@code.ru</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-[1px] bg-neutral mt-12"></div>
+        <div
+          class="flex py-6 w-full flex-col sm:flex-row gap-2 justify-between items-center sm:items-baseline text-neutral text-xs sm:text-[16px] leading-[23px]"
+        >
+          <a
+            class="hover:text-primary transition-[color] active:text-primary"
+            href="#"
+            >© 2023 — Все права защищены</a
+          >
+          <div
+            class="flex sm:ml-auto flex-col sm:flex-row w-fit items-baseline gap-0 sm:gap-16"
+          >
+            <a
+              class="hover:text-primary transition-[color] active:text-primary"
+              href="#"
+              >Пользовательское соглашение</a
+            >
+            <a
+              class="hover:text-primary transition-[color] active:text-primary"
+              href="#"
+              >Политика конфиденциальности</a
+            >
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
