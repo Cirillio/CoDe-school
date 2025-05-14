@@ -1,5 +1,3 @@
-Контур-Digital Тестовое
-
 ## Стек
 
 - **Vite** — мгновенная сборка и запуск проекта
@@ -14,8 +12,8 @@
 
 ```bash
 # 1. Клонировать репозиторий
-git clone https://github.com/Cirillio/kontur-mockup.git
-cd kontur-mockup
+git clone https://github.com/Cirillio/CoDe-school.git
+cd CoDe-school
 
 # 2. Установить зависимости
 npm install
@@ -28,3 +26,4 @@ npm run build
 
 #5. Деплой
 npm run deploy
+```
